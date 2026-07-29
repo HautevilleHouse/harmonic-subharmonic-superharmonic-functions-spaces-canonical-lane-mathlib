@@ -1,0 +1,25 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.HarmonicSubharmonicSuperharmonicFunctionsSpacesCanonicalLaneLean.HarmonicFunctionLayer
+import HautevilleHouse.HarmonicSubharmonicSuperharmonicFunctionsSpacesCanonicalLaneLean.SubharmonicFunctionLayer
+import HautevilleHouse.HarmonicSubharmonicSuperharmonicFunctionsSpacesCanonicalLaneLean.SuperharmonicFunctionLayer
+
+namespace HautevilleHouse
+namespace HarmonicSubharmonicSuperharmonicFunctionsSpacesCanonicalLaneLean
+
+structure RieszDecompositionCertificate where
+  subharmonicFunction : SubharmonicFunctionCertificate
+  harmonicComponent : HarmonicFunctionCertificate
+  superharmonicComponent : SuperharmonicFunctionCertificate
+  decompositionCarried : Bool
+  potentialTheoryBridge : Bool
+
+def primitiveRieszDecomposition : RieszDecompositionCertificate := {
+  subharmonicFunction := primitiveSubharmonicFunction,
+  harmonicComponent := primitiveHarmonicFunction,
+  superharmonicComponent := primitiveSuperharmonicFunction,
+  decompositionCarried := true,
+  potentialTheoryBridge := true
+}
+
+end HarmonicSubharmonicSuperharmonicFunctionsSpacesCanonicalLaneLean
+end HautevilleHouse
